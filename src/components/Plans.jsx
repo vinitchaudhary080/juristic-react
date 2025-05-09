@@ -40,7 +40,7 @@ export default function Plans() {
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div
           className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4
-                     bg-white shadow-lg divide-x divide-gray-200
+                     bg-[#F7F7F7] shadow-lg divide-x divide-gray-200
                      rounded-lg overflow-hidden"
         >
           {plans.map((plan) => (
@@ -48,7 +48,7 @@ export default function Plans() {
               key={plan.id}
               // group class se child hover styles apply kar sakte hain
               className="group flex flex-col items-center text-center p-8
-                         bg-white text-gray-800
+                         bg-[#F7F7F7] text-gray-800
                          hover:bg-[#0052E1] hover:text-white
                          transition-colors duration-300 ease-in-out"
             >
