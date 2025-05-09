@@ -7,7 +7,7 @@ export default function ContactUs() {
     const [message, setMessage] = useState("")
 
     return (
-        <section id="contact" className="bg-blue-50 py-24">
+        <section id="contact" className="bg-[#F7F7F7] py-24">
             <div className="container mx-auto px-6 lg:px-8 flex flex-col lg:flex-row gap-12">
 
                 {/* Left side */}

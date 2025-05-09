@@ -31,7 +31,7 @@ export default function Testimonials() {
         <div className="w-full lg:w-5/12 space-y-6">
           {/* Subtitle */}
           <div className="flex items-center">
-            <div className="w-12 h-12 rounded-full bg-[#0052E1] flex items-center justify-center">
+            <div className="w-12 h-12 rounded-full bg-yellow-100 flex items-center justify-center">
               <img src={quoteCircle} alt="Testimonials" className="w-6 h-6"/>
             </div>
             <span className="ml-4 text-sm font-semibold text-[#0052E1] uppercase tracking-wider">
@@ -58,7 +58,7 @@ export default function Testimonials() {
           {testimonials.map((t) => (
             <div key={t.id} className="space-y-6">
               {/* Quote icon */}
-              <div className="flex justify-center lg:justify-start">
+              <div className="flex justify-center lg:justify-start object-cover">
                 <img src={quoteOutline} alt="" className="w-8 h-8 text-yellow-500"/>
               </div>
               {/* Testimonial text */}
