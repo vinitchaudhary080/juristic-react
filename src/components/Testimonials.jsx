@@ -9,16 +9,16 @@ const testimonials = [
   {
     id: 1,
     img: client1,
-    name: "Michel Jone",
-    role: "Creative Designer",
-    text: `Recently cut out of an illustrated magazine and housed in a nice, gilded frame. It showed a lady fitted out with a fur hat and`,
+    name: "Rajiv Mehta",
+    role: "CEO, Mehta Industries",
+    text: `Ms. Joshi’s arbitration award in our dispute was thorough, fair, and delivered ahead of schedule. Highly recommend her expertise.`,
   },
   {
     id: 2,
     img: client2,
-    name: "Michel Jone",
-    role: "Creative Designer",
-    text: `Recently cut out of an illustrated magazine and housed in a nice, gilded frame. It showed a lady fitted out with a fur hat and`,
+    name: "Priya Verma",
+    role: "Corporate Counsel",
+    text: `Her mediation skills helped us settle a 5-year family property dispute amicably. Truly a life-changer.`,
   },
 ];
 
@@ -31,10 +31,10 @@ export default function Testimonials() {
         <div className="w-full lg:w-5/12 space-y-6">
           {/* Subtitle */}
           <div className="flex items-center">
-            <div className="w-12 h-12 rounded-full bg-yellow-100 flex items-center justify-center">
+            <div className="w-12 h-12 rounded-full bg-[#0052E1] flex items-center justify-center">
               <img src={quoteCircle} alt="Testimonials" className="w-6 h-6"/>
             </div>
-            <span className="ml-4 text-sm font-semibold text-yellow-500 uppercase tracking-wider">
+            <span className="ml-4 text-sm font-semibold text-[#0052E1] uppercase tracking-wider">
               Testimonials
             </span>
           </div>
@@ -48,7 +48,7 @@ export default function Testimonials() {
           </p>
           {/* Pagination dots */}
           <div className="flex items-center space-x-2">
-            <span className="w-8 h-2 rounded-full bg-yellow-500"></span>
+            <span className="w-8 h-2 rounded-full bg-[#0052E1]"></span>
             <span className="w-2 h-2 rounded-full bg-gray-300"></span>
           </div>
         </div>
