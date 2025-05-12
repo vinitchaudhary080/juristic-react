@@ -1,6 +1,7 @@
 // src/components/Navbar.jsx
 import React, { useState, useEffect } from "react";
 import logo from "../assets/images/logo.png";
+import { Link } from "react-router-dom";
 
 // Social icons
 import facebookIcon from "../assets/icons/facebook.png";
@@ -54,20 +55,30 @@ export default function Navbar() {
       <nav className="bg-[#f7f7f7] sticky top-0 z-50 shadow-sm">
         <div className="container mx-auto px-6 flex items-center justify-between h-16">
           {/* Logo */}
-          <a href="#" className="flex items-center">
+          <Link to="/" className="flex items-center">
             <img src={logo} alt="Juristic" className="h-8" />
             <span className="ml-2 text-2xl font-semibold text-gray-800">
-              Juristic
+              Advocate Ms. Sangeeta Joshi
             </span>
-          </a>
+          </Link>
 
           {/* Desktop Links */}
           <ul className="hidden lg:flex items-center space-x-8 text-gray-700">
             {links.map((link) => (
               <li key={link}>
-                <a href={`#${link.toLowerCase()}`} className="hover:text-gray-900">
-                  {link}
-                </a>
+                {link === "Home" ? (
+                  <Link to="/" className="hover:text-gray-900">
+                    {link}
+                  </Link>
+                ) : link === "About" ? (
+                  <Link to="/about" className="hover:text-gray-900">
+                    {link}
+                  </Link>
+                ) : (
+                  <a href={`#${link.toLowerCase()}`} className="hover:text-gray-900">
+                    {link}
+                  </a>
+                )}
               </li>
             ))}
           </ul>
@@ -111,13 +122,23 @@ export default function Navbar() {
           <ul className="flex flex-col space-y-4 px-6">
             {links.map((link) => (
               <li key={link}>
-                <a
-                  href={`#${link.toLowerCase()}`}
-                  className="block text-lg text-gray-700 hover:text-gray-900"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  {link}
-                </a>
+                {link === "Home" ? (
+                  <Link to="/" className="block text-lg text-gray-700 hover:text-gray-900" onClick={() => setMobileMenuOpen(false)}>
+                    {link}
+                  </Link>
+                ) : link === "About" ? (
+                  <Link to="/about" className="block text-lg text-gray-700 hover:text-gray-900" onClick={() => setMobileMenuOpen(false)}>
+                    {link}
+                  </Link>
+                ) : (
+                  <a
+                    href={`#${link.toLowerCase()}`}
+                    className="block text-lg text-gray-700 hover:text-gray-900"
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    {link}
+                  </a>
+                )}
               </li>
             ))}
           </ul>

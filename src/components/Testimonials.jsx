@@ -1,9 +1,9 @@
 // src/components/Testimonials.jsx
 import React from "react";
-import quoteCircle    from "../assets/icons/quote-circle.png";
-import quoteOutline   from "../assets/icons/quote-outline.png";
-import client1        from "../assets/images/client1.jpg";
-import client2        from "../assets/images/client2.jpg";
+import quoteCircle  from "../assets/icons/quote-circle.png";
+import quoteOutline from "../assets/icons/quote-outline.png";
+import client1      from "../assets/images/client1.jpg";
+import client2      from "../assets/images/client2.jpg";
 
 const testimonials = [
   {
@@ -31,8 +31,8 @@ export default function Testimonials() {
         <div className="w-full lg:w-5/12 space-y-6">
           {/* Subtitle */}
           <div className="flex items-center">
-            <div className="w-12 h-12 rounded-full bg-yellow-100 flex items-center justify-center">
-              <img src={quoteCircle} alt="Testimonials" className="w-6 h-6"/>
+            <div className="w-12 h-12 rounded-full bg-blue-50  flex items-center justify-center">
+              <img src={quoteCircle} alt="Testimonials" className="w-6 h-6" />
             </div>
             <span className="ml-4 text-sm font-semibold text-[#0052E1] uppercase tracking-wider">
               Testimonials
@@ -44,7 +44,7 @@ export default function Testimonials() {
           </h2>
           {/* Intro text */}
           <p className="text-gray-600 text-base lg:text-lg">
-            Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunct showed a lady fitted out
+            Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum.
           </p>
           {/* Pagination dots */}
           <div className="flex items-center space-x-2">
@@ -58,8 +58,12 @@ export default function Testimonials() {
           {testimonials.map((t) => (
             <div key={t.id} className="space-y-6">
               {/* Quote icon */}
-              <div className="flex justify-center lg:justify-start object-cover">
-                <img src={quoteOutline} alt="" className="w-8 h-8 text-yellow-500"/>
+              <div className="flex justify-center lg:justify-start">
+                 <img
+                    src={quoteOutline}
+                    alt=""
+                    className="max-w-full max-h-full"
+                  />
               </div>
               {/* Testimonial text */}
               <p className="text-gray-600 text-base leading-relaxed">
@@ -67,13 +71,17 @@ export default function Testimonials() {
               </p>
               {/* Client info */}
               <div className="flex items-center space-x-4">
-                <img
-                  src={t.img}
-                  alt={t.name}
-                  className="w-12 h-12 object-cover rounded-full"
-                />
+                <div className="w-12 h-12 rounded-full overflow-hidden">
+                  <img
+                    src={t.img}
+                    alt={t.name}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
                 <div>
-                  <h3 className="text-lg font-semibold text-gray-900">{t.name}</h3>
+                  <h3 className="text-lg font-semibold text-gray-900">
+                    {t.name}
+                  </h3>
                   <p className="text-blue-600 text-sm">{t.role}</p>
                 </div>
               </div>
