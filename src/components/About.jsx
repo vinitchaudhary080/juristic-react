@@ -8,7 +8,7 @@ export default function About() {
   return (
     <section id="about" className="py-24 bg-white">
       <div className="container mx-auto px-6 lg:px-8 flex flex-col lg:flex-row items-center gap-12">
-        
+
         {/* Left: Heading & Intro */}
         <div className="w-full lg:w-6/12 space-y-6">
           <div className="flex items-center space-x-4">
@@ -33,8 +33,7 @@ export default function About() {
 
           <Link
             to="/about"
-            className="inline-block px-6 py-3 bg-blue-900 text-white font-medium rounded-lg
-                       hover:bg-blue-800 transition-colors duration-300"
+            className="inline-block px-6 py-3 bg-[#0052E1] text-white font-medium rounded-lg border border-[#0052E1] hover:bg-white hover:text-[#0052E1] transition-colors duration-300"
           >
             Read Full Profile
           </Link>
