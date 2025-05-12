@@ -6,21 +6,35 @@ import phoneIcon from "../assets/icons/phone.png";
 
 export default function ContactUs() {
   const formRef = useRef();
-  const [status, setStatus] = useState(""); // success / error
+  const [status, setStatus] = useState(""); // "SUCCESS" or "ERROR"
 
   const sendEmail = (e) => {
     e.preventDefault();
+
+    const serviceID  = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+    const templateID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+    const publicKey  = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+
+    if (!serviceID || !templateID || !publicKey) {
+      console.error("Missing EmailJS env vars:", { serviceID, templateID, publicKey });
+      setStatus("ERROR");
+      return;
+    }
+
     emailjs
       .sendForm(
-        process.env.REACT_APP_EMAILJS_SERVICE_ID,
-        process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
+        serviceID,
+        templateID,
         formRef.current,
-        process.env.REACT_APP_EMAILJS_PUBLIC_KEY
+        publicKey
       )
       .then(
-        () => setStatus("SUCCESS"),
+        () => {
+          setStatus("SUCCESS");
+          e.target.reset();
+        },
         (err) => {
-          console.error(err);
+          console.error("EmailJS error:", err);
           setStatus("ERROR");
         }
       );
@@ -37,18 +51,14 @@ export default function ContactUs() {
           </p>
           <div className="mt-6 space-y-4 text-lg text-gray-800">
             <p>
-              <strong>Office:</strong> 209, C.K. Daphtary Chambers, Supreme Court
-              Complex, New Delhi – 110 001
+              <strong>Office:</strong> 209, C.K. Daphtary Chambers, Supreme Court Complex, New Delhi – 110 001
             </p>
             <p>
               <strong>Mobile:</strong> +91 8800576424
             </p>
             <p>
               <strong>Email:</strong>{" "}
-              <a
-                href="mailto:sangeetajoshisc@gmail.com"
-                className="underline"
-              >
+              <a href="mailto:sangeetajoshisc@gmail.com" className="underline">
                 sangeetajoshisc@gmail.com
               </a>
             </p>
@@ -59,9 +69,8 @@ export default function ContactUs() {
         <div className="w-full lg:w-1/2">
           <div className="bg-white rounded-xl shadow-lg p-8">
             <h3 className="text-2xl font-bold text-gray-900">Contact Form</h3>
-            <p className="text-gray-600 text-sm mt-1">
-              You can reach us anytime
-            </p>
+            <p className="text-gray-600 text-sm mt-1">You can reach us anytime</p>
+
             <form
               ref={formRef}
               onSubmit={sendEmail}
@@ -87,10 +96,7 @@ export default function ContactUs() {
                 placeholder="Phone"
                 className="border rounded px-4 py-2"
               />
-              <select
-                name="service"
-                className="border rounded px-4 py-2"
-              >
+              <select name="service" className="border rounded px-4 py-2">
                 <option value="">Consultation Type</option>
                 <option value="Arbitration">Arbitration</option>
                 <option value="Mediation">Mediation</option>
