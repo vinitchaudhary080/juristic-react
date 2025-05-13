@@ -90,8 +90,9 @@ export default function AboutPage() {
       </section>
 
       {/* Follow-on Sections */}
-      <IntegritySection />
       <RangeSection />
+      <IntegritySection />
+      
       <DefendSection />
       <ServicesHeader />
       <ImageSliderSection />
