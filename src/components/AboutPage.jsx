@@ -2,7 +2,6 @@
 import React from "react";
 import Navbar from "./Navbar";
 import ContactUs from "./ContactUs";
-
 import headerImg from "../assets/images/about-header.jpg";
 import aboutImg from "../assets/images/about-lawyer.jpg";
 import IntegritySection from "./IntegritySection";
@@ -14,7 +13,6 @@ import ImageSliderSection from "./ImageSliderSection";
 export default function AboutPage() {
   return (
     <>
-      {/* Hero Header */}
       <header
         className="relative h-60 md:h-72 lg:h-96 bg-center bg-cover"
         style={{ backgroundImage: `url(${headerImg})` }}
@@ -22,19 +20,14 @@ export default function AboutPage() {
         <div className="absolute inset-0 bg-black/50" />
         <div className="relative z-10 flex flex-col items-center justify-center h-full text-center">
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-white">
-            About Advocate Ms. Sangeeta Joshi
+            About Adv. Sangeeta Joshi
           </h1>
-          <p className="mt-2 text-lg text-gray-200">
-            Advocate, Supreme Court of India
-          </p>
+          <p className="mt-2 text-lg text-gray-200">Advocate, Supreme Court of India</p>
         </div>
       </header>
 
-      {/* Main About Section */}
       <section className="container mx-auto px-6 lg:px-8 py-16">
         <div className="flex flex-col lg:flex-row items-center gap-12">
-
-          {/* Left: Image */}
           <div className="w-full lg:w-1/2">
             <img
               src={aboutImg}
@@ -42,18 +35,13 @@ export default function AboutPage() {
               className="w-full h-auto rounded-lg shadow-md object-cover"
             />
           </div>
-
-          {/* Right: Text + Memberships */}
           <div className="w-full lg:w-1/2 space-y-6">
             <h2 className="text-3xl md:text-4xl font-semibold text-gray-800">
               A Profile of Excellence
             </h2>
             <p className="text-gray-700 leading-relaxed">
-              Ms. Sangeeta Joshi is a distinguished advocate of the Supreme Court of India with over 25 years’ practice in civil, criminal, arbitration and mediation matters.
-              She holds an LL.B. (1999), a Master of Journalism and an M.Com (Management), and is fluent in English, Hindi and Marathi.
+              Ms. Sangeeta Joshi is a distinguished advocate of the Supreme Court of India with over 25 years’ practice in civil, criminal, arbitration and mediation matters. She holds an LL.B. (1999), a Master of Journalism and an M.Com (Management), and is fluent in English, Hindi and Marathi.
             </p>
-
-            {/* Professional Memberships */}
             <div className="mt-6">
               <p className="font-semibold text-gray-800">Professional Memberships:</p>
               <ul className="list-disc list-inside space-y-2 text-gray-700">
@@ -69,8 +57,6 @@ export default function AboutPage() {
                 <li>Recognized for good moral character and conduct</li>
               </ul>
             </div>
-
-            {/* Quick Achievements */}
             <div className="mt-8 space-y-3">
               <p className="font-semibold text-gray-800">Key Appointments & Roles:</p>
               <ul className="list-disc list-inside space-y-2 text-gray-700">
@@ -89,14 +75,11 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Follow-on Sections */}
       <RangeSection />
       <IntegritySection />
-      
       <DefendSection />
       <ServicesHeader />
       <ImageSliderSection />
-
       <ContactUs />
     </>
   );

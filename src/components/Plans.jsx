@@ -1,36 +1,33 @@
-// src/components/Plans.jsx
 import React from "react";
-// SVG/PNG icons ko assets/icons folder mein daal ke yahan import karo
-import familyIcon    from "../assets/icons/family-law.png";
-import personalIcon  from "../assets/icons/personal-injury.png";
-import criminalIcon  from "../assets/icons/criminal-law.png";
-import businessIcon  from "../assets/icons/business-law.png";
+import CorporationIcon from "../assets/icons/Corporation.png";
+import arbitrationIcon from "../assets/icons/Arbitration india.png";
+import CriminalIcon from "../assets/icons/Criminal.png";
+import PILIcon from "../assets/icons/PIL.png";
 
-// plans array ab sirf data rakhega, active flag ko ignore karenge
 const plans = [
   {
     id: 1,
-    icon: familyIcon,
-    subtitle: "Family Law plan",
-    title:    "Family Law",
+    icon: CorporationIcon,
+    subtitle: "Civil Cases",
+    title: "Corporate Law ",
   },
   {
     id: 2,
-    icon: personalIcon,
-    subtitle: "Personal injury plan",
-    title:    "Personal Injury",
+    icon: arbitrationIcon,
+    subtitle: "Arbitration India & International",
+    title: "ADR",
   },
   {
     id: 3,
-    icon: criminalIcon,
-    subtitle: "Criminal plan",
-    title:    "Criminal Law",
+    icon: CriminalIcon,
+    subtitle: "Criminal Cases",
+    title: "Criminal Law",
   },
   {
     id: 4,
-    icon: businessIcon,
-    subtitle: "Business law plan",
-    title:    "Business Law",
+    icon: PILIcon,
+    subtitle: "Public Interst litigation ",
+    title: "PIL",
   },
 ];
 
@@ -46,7 +43,6 @@ export default function Plans() {
           {plans.map((plan) => (
             <div
               key={plan.id}
-              // group class se child hover styles apply kar sakte hain
               className="group flex flex-col items-center text-center p-8
                          bg-[#F7F7F7] text-gray-800
                          hover:bg-[#0052E1] hover:text-white

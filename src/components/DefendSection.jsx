@@ -1,6 +1,4 @@
-// src/components/DefendSection.jsx
 import React from "react";
-
 
 const steps = [
   {
@@ -24,7 +22,6 @@ export default function DefendSection() {
   return (
     <section className="bg-[#F7F7F7] py-24">
       <div className="container mx-auto px-6 lg:px-8 flex flex-col lg:flex-row items-start gap-12">
-        {/* Left: Steps */}
         <div className="w-full lg:w-1/2 space-y-6">
           {steps.map((step, idx) => (
             <div
@@ -51,8 +48,6 @@ export default function DefendSection() {
             </div>
           ))}
         </div>
-
-        {/* Right: Heading, paragraph & button */}
         <div className="w-full lg:w-1/2 self-center flex flex-col items-start space-y-6">
           <h2 className="text-4xl font-semibold text-gray-900">
             Your rights matter, we are here to defend them
@@ -69,7 +64,6 @@ export default function DefendSection() {
             Schedule Your Consultation
           </a>
         </div>
-
       </div>
     </section>
   );

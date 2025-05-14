@@ -28,19 +28,11 @@ export default function Navbar() {
           <div className="container mx-auto px-6 py-2 flex items-center justify-between">
             <div className="flex items-center space-x-4">
               <span>
-                <span className="text-[#b3b3b3]">Call Us:</span>{" "}
-                <span className="text-white">+91 8800576424</span>
-              </span>
-              <span className="hidden sm:inline">
                 <span className="text-[#b3b3b3]">Email us:</span>{" "}
                 <span className="text-white">sangeetajoshisc@gmail.com</span>
               </span>
-              <span className="hidden sm:inline">
-                <span className="text-[#b3b3b3]">Our address:</span>{" "}
-                <span className="text-white">
-                  209, C.K. Daphtary Chambers, Supreme Court Complex, New Delhi – 110 001
-                </span>
-              </span>
+             
+             
             </div>
             <div className="flex space-x-4">
               <img src={facebookIcon} alt="Facebook" className="w-4 h-4" />
@@ -57,8 +49,8 @@ export default function Navbar() {
           {/* Logo */}
           <Link to="/" className="flex items-center">
             <img src={logo} alt="Juristic" className="h-8" />
-            <span className="ml-2 text-2xl font-semibold text-gray-800">
-              Advocate Ms. Sangeeta Joshi
+            <span className="ml-2 text-xl font-semibold text-gray-800">
+              Adv.Sangeeta Joshi
             </span>
           </Link>
 

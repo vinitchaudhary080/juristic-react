@@ -8,7 +8,6 @@ export default function Hero() {
             id="home"
             className="relative h-screen overflow-hidden"
         >
-            {/* Background + dark overlay */}
             <div className="absolute inset-0">
                 <img
                     src={heroBg}
@@ -17,16 +16,12 @@ export default function Hero() {
                 />
                 <div className="absolute inset-0 bg-black/60"></div>
             </div>
-
-            {/* Content */}
             <div className="relative z-10 container mx-auto px-6 lg:px-8 h-full flex flex-col lg:flex-row items-center">
-                {/* Text */}
-               <div className="w-full lg:w-1/2 text-center lg:text-left mt-16 lg:mt-0">
-
-                    <h1 className="text-5xl font-serif text-white ">
-                        Ms. Sangeeta Joshi
+                <div className="w-full lg:w-1/2 text-center lg:text-left mt-16 lg:mt-0">
+                    <h1 className="text-5xl font-serif text-white">
+                        Adv.Sangeeta Joshi
                         <br />
-                        Advocate, Supreme Court of India
+                        Supreme Court of India
                     </h1>
                     <p className="mt-4 text-lg text-white">
                         Empaneled Arbitrator – Delhi International Arbitration Centre (DIAC)
@@ -35,22 +30,12 @@ export default function Hero() {
                     </p>
                     <a
                         href="#contact"
-                        className="
-    mt-8 inline-block px-8 py-3
-    bg-[#0052E1] text-white rounded-md
-    transition-colors duration-300
-    hover:bg-white hover:text-[#0052E1]
-  "
+                        className="mt-8 inline-block px-8 py-3 bg-[#0052E1] text-white rounded-md transition-colors duration-300 hover:bg-white hover:text-[#0052E1]"
                     >
                         Book a Consultation
                     </a>
-
-
                 </div>
             </div>
-
-
-
-        </section >
+        </section>
     );
 }

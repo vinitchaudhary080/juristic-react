@@ -1,8 +1,5 @@
-// src/components/Services.jsx
 import React from "react";
-import serviceBg from "../assets/images/services-bg.jpg"; // agar banner me background use karna ho
-
-// Existing icons
+import serviceBg from "../assets/images/services-bg.jpg";
 import arbitrationIcon from "../assets/icons/Arbitration india.png";
 import MediationServicesIcon from "../assets/icons/Mediation Services.png";
 import ServiceMatterIcon from "../assets/icons/Service Matter.png";
@@ -11,25 +8,61 @@ import CivivlIcon from "../assets/icons/Civil.png";
 import CorporationIcon from "../assets/icons/Corporation.png";
 import CriminalIcon from "../assets/icons/Criminal.png";
 import PILIcon from "../assets/icons/PIL.png";
-// …baaki icons import karo yahan…
 
 const services = [
-   { id: 1, icon: arbitrationIcon, title: "Arbitration india & International", desc: "100+ arbitrations handled; empaneled with DIAC & multiple corporate panels." },
-    { id: 2, icon: MediationServicesIcon, title: "Mediation Services",       desc: "Delhi Judicial Academy certified (40 hrs); successfully mediated 10+ disputes." },
-    { id: 3, icon: ServiceMatterIcon, title: "Service Matter", desc: "25+ years Supreme Court practice in civil, criminal & constitutional matters." },
-    { id: 4, icon: CorporateLawIcon, title: "Corporate Law",           desc: "Strategic counsel on commercial, property & personal legal issues." },
-    { id: 5, icon: CivivlIcon, title: "Civil",         desc: "Comprehensive agreements: employment, sale, lease, partnership & more." },
-    { id: 6, icon: CorporationIcon, title: "Corporation", desc: "Registration & enforcement for patents, trademarks, copyrights & designs." },
-    { id: 7, icon: CriminalIcon, title: "Criminal",            desc: "Company formation, compliance, mergers & acquisitions services." },
-    { id: 8, icon: PILIcon, title: "PIL",     desc: "Advisory on SEBI, RBI, FEMA & other statutory regulations." },
-    
+  {
+    id: 1,
+    icon: arbitrationIcon,
+    title: "Arbitration india & International",
+    desc: "100+ arbitrations handled; empaneled with DIAC & multiple corporate panels."
+  },
+  {
+    id: 2,
+    icon: MediationServicesIcon,
+    title: "Mediation Services",
+    desc: "Delhi Judicial Academy certified (40 hrs); successfully mediated 10+ disputes."
+  },
+  {
+    id: 3,
+    icon: ServiceMatterIcon,
+    title: "Service Matter",
+    desc: "25+ years Supreme Court practice in civil, criminal & constitutional matters."
+  },
+  {
+    id: 4,
+    icon: CorporateLawIcon,
+    title: "Corporate Law",
+    desc: "Strategic counsel on commercial, property & personal legal issues."
+  },
+  {
+    id: 5,
+    icon: CivivlIcon,
+    title: "Civil",
+    desc: "Comprehensive agreements: employment, sale, lease, partnership & more."
+  },
+  {
+    id: 6,
+    icon: CorporationIcon,
+    title: "Corporation",
+    desc: "Registration & enforcement for patents, trademarks, copyrights & designs."
+  },
+  {
+    id: 7,
+    icon: CriminalIcon,
+    title: "Criminal",
+    desc: "Company formation, compliance, mergers & acquisitions services."
+  },
+  {
+    id: 8,
+    icon: PILIcon,
+    title: "PIL",
+    desc: "Advisory on SEBI, RBI, FEMA & other statutory regulations."
+  }
 ];
 
 export default function Services() {
   return (
     <section id="services" className="bg-white">
-      
-      {/* Heading Section */}
       <div className="pt-16 pb-0 container mx-auto px-6 lg:px-8 flex flex-col lg:flex-row justify-between items-center">
         <div className="text-center lg:text-left">
           <h2 className="text-4xl font-semibold text-gray-900">
@@ -40,11 +73,7 @@ export default function Services() {
           </p>
         </div>
       </div>
-      
-      {/* Services Grid + Banner */}
       <div className="pt-16 pb-24 container mx-auto px-6 lg:px-8">
-
-        {/* Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {services.map((s) => (
             <div
@@ -65,8 +94,6 @@ export default function Services() {
             </div>
           ))}
         </div>
-
-        {/* Big Banner */}
         <div
           className="relative mt-12 rounded-lg text-center text-white h-80 bg-cover bg-center flex flex-col justify-center overflow-hidden"
           style={{ backgroundImage: `url(${serviceBg})` }}
@@ -84,7 +111,6 @@ export default function Services() {
             </a>
           </div>
         </div>
-
       </div>
     </section>
   );
