@@ -98,23 +98,34 @@ export default function Services() {
           className="relative mt-12 rounded-lg text-center text-white h-80 bg-cover bg-center flex flex-col justify-center overflow-hidden"
           style={{ backgroundImage: `url(${serviceBg})` }}
         >
-          <div className="absolute inset-0 bg-[#0052E1]/60"></div>
-          <div className="relative z-10 px-8 flex flex-col items-center justify-center h-full text-center">
-            <h3 className="text-4xl font-semibold mb-4">
-              Streamlined Legal Solutions, Trusted Results
-            </h3>
-            <p className="text-lg mb-6 text-white/90">
-              Navigate complex disputes with confidence—benefit from 25+ years of Supreme Court advocacy,
-              Supreme Court–certified mediation and DIAC-empaneled arbitration expertise, all tailored to your needs.
-            </p>
-            <a
-              href="#contact"
-              className="inline-block px-8 py-3 bg-white text-[#0052E1] font-medium rounded transition-colors duration-300 hover:bg-[#0052E1] hover:text-white"
-            >
-              Schedule Your Free Consultation
-            </a>
+          <section
+  className="relative bg-cover bg-center"
+  style={{ backgroundImage: `url(${serviceBg})` }}
+>
+  {/* dark overlay */}
+  <div className="absolute inset-0 bg-[#0052E1] bg-opacity-60" />
 
-          </div>
+  {/* content wrapper */}
+  <div className="relative z-10 max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-24">
+    <div className="text-center">
+      <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold text-white mb-4">
+        Streamlined Legal Solutions, Trusted Results
+      </h3>
+      <p className="mx-auto max-w-2xl text-sm sm:text-base lg:text-lg text-white/90 mb-6">
+        Navigate complex disputes with confidence—benefit from 25+ years of Supreme Court advocacy,
+        Supreme Court–certified mediation and DIAC-empaneled arbitration expertise, all tailored to your needs.
+      </p>
+      <a
+        href="#contact"
+        className="inline-block px-6 sm:px-8 py-3 bg-white text-[#0052E1] font-medium rounded-md transition-colors duration-300 hover:bg-[#0052E1] hover:text-white"
+      >
+        Schedule Your Free Consultation
+      </a>
+    </div>
+  </div>
+</section>
+
+
 
 
         </div>
