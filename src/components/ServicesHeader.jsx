@@ -1,18 +1,26 @@
 // src/components/Services.jsx
 import React from "react";
-import arbitrationIcon from "../assets/icons/attorneys.png";
-// (import other icons here as needed)
+
+import arbitrationIcon from "../assets/icons/Arbitration india.png";
+import MediationServicesIcon from "../assets/icons/Mediation Services.png";
+import ServiceMatterIcon from "../assets/icons/Service Matter.png";
+import CorporateLawIcon from "../assets/icons/Corporate Law.png";
+import CivivlIcon from "../assets/icons/Civil.png";
+import CorporationIcon from "../assets/icons/Corporation.png";
+import CriminalIcon from "../assets/icons/Criminal.png";
+import PILIcon from "../assets/icons/PIL.png";
+// …baaki icons import karo yahan…
 
 const services = [
-  { id: 1, icon: arbitrationIcon, title: "Arbitration india & International", desc: "100+ arbitrations handled; empaneled with DIAC & multiple corporate panels." },
-  { id: 2, icon: arbitrationIcon, title: "Mediation Services",       desc: "Delhi Judicial Academy certified (40 hrs); successfully mediated 10+ disputes." },
-  { id: 3, icon: arbitrationIcon, title: "Service Matter", desc: "25+ years Supreme Court practice in civil, criminal & constitutional matters." },
-  { id: 4, icon: arbitrationIcon, title: "Corporate Law",           desc: "Strategic counsel on commercial, property & personal legal issues." },
-  { id: 5, icon: arbitrationIcon, title: "Civil",         desc: "Comprehensive agreements: employment, sale, lease, partnership & more." },
-  { id: 6, icon: arbitrationIcon, title: "Corporation", desc: "Registration & enforcement for patents, trademarks, copyrights & designs." },
-  { id: 7, icon: arbitrationIcon, title: "Criminal",            desc: "Company formation, compliance, mergers & acquisitions services." },
-  { id: 8, icon: arbitrationIcon, title: "PIL",     desc: "Advisory on SEBI, RBI, FEMA & other statutory regulations." },
-  
+   { id: 1, icon: arbitrationIcon, title: "Arbitration india & International", desc: "100+ arbitrations handled; empaneled with DIAC & multiple corporate panels." },
+    { id: 2, icon: MediationServicesIcon, title: "Mediation Services",       desc: "Delhi Judicial Academy certified (40 hrs); successfully mediated 10+ disputes." },
+    { id: 3, icon: ServiceMatterIcon, title: "Service Matter", desc: "25+ years Supreme Court practice in civil, criminal & constitutional matters." },
+    { id: 4, icon: CorporateLawIcon, title: "Corporate Law",           desc: "Strategic counsel on commercial, property & personal legal issues." },
+    { id: 5, icon: CivivlIcon, title: "Civil",         desc: "Comprehensive agreements: employment, sale, lease, partnership & more." },
+    { id: 6, icon: CorporationIcon, title: "Corporation", desc: "Registration & enforcement for patents, trademarks, copyrights & designs." },
+    { id: 7, icon: CriminalIcon, title: "Criminal",            desc: "Company formation, compliance, mergers & acquisitions services." },
+    { id: 8, icon: PILIcon, title: "PIL",     desc: "Advisory on SEBI, RBI, FEMA & other statutory regulations." },
+    
 ];
 
 export default function Services() {
