@@ -29,7 +29,7 @@ export default function Navbar() {
             <div className="flex items-center space-x-4">
               <span>
                 <span className="text-[#b3b3b3]">Email us:</span>{" "}
-                <span className="text-white">advjoshisangeeta@gmail.com</span>
+                <span className="text-white">sangeetajoshisc@gmail.com</span>
               </span>
              
              

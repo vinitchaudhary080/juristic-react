@@ -49,7 +49,7 @@ export default function ContactUs() {
             <p>
               <strong>Email:</strong>{" "}
               <a href="mailto:sangeetajoshisc@gmail.com" className="underline">
-                advjoshisangeeta@gmail.com
+                sangeetajoshisc@gmail.com
               </a>
             </p>
           </div>
